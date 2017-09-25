@@ -60,7 +60,8 @@ def technique_search(db, techniques):
     for t in techniques:
         if t in provar:
             for p in provar[t]:
-                projects.append(get_project(db, p['id']))
+                if not get_project(db, p['id']) in projects:
+                    projects.append(get_project(db, p['id']))
 
     return projects
 
