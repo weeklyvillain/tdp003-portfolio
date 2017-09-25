@@ -55,14 +55,20 @@ def get_technique_stats(db):
     return technique_dict
 
 def technique_search(db, techniques):
-    pass
+    projects = []
+    provar = get_technique_stats(db)
+    for t in techniques:
+        if t in provar:
+            for p in provar[t]:
+                projects.append(get_project(db, p['id']))
+
+    return projects
 
 def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=None, search_fields=None):
     project_lst = []
     if techniques != None:
-        for t in techniques:
-            if t in get_technique_stats(db):
-
+        project_lst = technique_search(db, techniques)
+    return project_lst
 
 
 
