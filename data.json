@@ -31,11 +31,31 @@
     "lulz_had": "Väldigt måååååånga.",
     "external_link": "http://www.ida.liu.se/~TDP005/",
     "small_image": "none",
-    "techniques_used": ["html5", "css3", "C++"],
-    "project_name": "asdfgh",
+    "techniques_used": ["html5", "css3"],
+    "project_name": "Jadu en fint projkt",
     "course_id": "TDP005",
     "end_date": "2015-13-31",
     "project_no": 1,
+    "big_image": "none"
+  }
+],
+
+[
+  {
+    "start_date": "2015-09-12",
+    "short_description": "Jadu en fint projkt",
+    "course_name": "TDP005",
+    "long_description": "Ett fintfint system för att visa upp arbetsresultat för potentiella kunder eller arbetsgivare.",
+    "group_size": 4,
+    "academic_credits": "100hp",
+    "lulz_had": "Väldigt måååååånga.",
+    "external_link": "http://www.ida.liu.se/~TDP005/",
+    "small_image": "none",
+    "techniques_used": ["html5", "css3", "C++"],
+    "project_name": "Jadu en fint projkt",
+    "course_id": "TDP005",
+    "end_date": "2015-13-31",
+    "project_no": 3,
     "big_image": "none"
   }
 ]
