@@ -1,4 +1,4 @@
-import json, copy
+import json
 from pprint import pprint
 
 def sort_projects(lst):
@@ -115,8 +115,6 @@ def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=
         project_lst = string_search(project_lst, search)
 
     project_lst = by_sorter(project_lst, sort_by, sort_order, db)
-
-
         
     return project_lst
 
