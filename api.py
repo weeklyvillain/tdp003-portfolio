@@ -89,7 +89,7 @@ def by_sorter(project_lst, search_by, sort_order, db):
         for p in item[0]:
             if str(p) in search_by:
                 projects.append((item[0][str(p)] , item[0]['project_no']))
-    if sort_order == 'asc':
+    if sort_order == 'desc':
         projects.sort(reverse=True)
     else:
         projects.sort()
