@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 
-virtenv = os.environ['portfolio-filer358.openshift.ida.liu.se/~/git/portfolio.git/'] + '/virtenv/'
+virtenv = os.environ[''] + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     with open(virtualenv) as f:
