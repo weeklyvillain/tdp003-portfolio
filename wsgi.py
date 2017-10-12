@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 
-virtenv = os.environ['var/lib/openshift/59df606679c0532a7c000576/app-root/runtime/repo'] + '/virtenv/'
+virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     with open(virtualenv) as f:
@@ -15,6 +15,7 @@ except IOError:
 #
 
 import os
-os.chdir(os.environ['var/lib/openshift/59df606679c0532a7c000576/app-root/'])
+os.chdir(os.environ['OPENSHIFT_REPO_DIR'])
 
-from server import app as application
+
+from data import app as application
