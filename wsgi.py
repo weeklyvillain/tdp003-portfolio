@@ -18,4 +18,4 @@ import os
 os.chdir(os.environ['OPENSHIFT_REPO_DIR'])
 
 
-from data.py import app as application
+from server import app as application
