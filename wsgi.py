@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+import os
 
-
-virtualenv = 'bin/activate_this.py'
+virtenv = os.environ['var/lib/openshift/59df606679c0532a7c000576/app-root/runtime/repo'] + '/virtenv/'
+virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     with open(virtualenv) as f:
         code = compile(f.read(), virtualenv, 'exec')
@@ -13,7 +14,7 @@ except IOError:
 # line, it's possible required libraries won't be in your searchable path
 #
 
+import os
+os.chdir(os.environ['var/lib/openshift/59df606679c0532a7c000576/app-root/'])
 
-
-from main import app as application
-
+from server import app as application
