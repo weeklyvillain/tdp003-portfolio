@@ -1,0 +1,59 @@
+{% extends "template.html" %}
+{% block body %}
+ 
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#lst_techniques').multiselect({
+                includeSelectAllOption: true,
+                nonSelectedText: "Tekniker:"
+            });
+            $('#lst_fields').multiselect({
+                includeSelectAllOption: true,
+                nonSelectedText: "Sök i:"
+            });
+        });
+    </script>
+<link href="../static/stylesheets/list.css" rel="stylesheet" type="text/css" />
+
+<form method="get">
+<input type="text" name="search_word" placeholder="Sök">
+<select id="sort_by" name="sort_by">
+    <option value="start_date">Sortera efter:</option>
+    {% for i in projects[0] %}
+    <option value="{{ i }}">{{ i }}</option>
+    {% endfor %}
+</select> 
+<select id="sort_order" name="sort_order">
+    <option value="asc">Asc</option>
+    <option value="desc">desc</option>  
+</select>
+<select id="lst_techniques" multiple="multiple" name="tech_lst">
+        {% for t in tech %}
+        <option value="{{ t }}">{{ t }}</option>
+        {% endfor %}
+</select>
+<select id="lst_fields" multiple="multiple" name="field_lst">
+        {%  for i in projects[0] %}
+        <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+</select>
+<input type="submit" id="btnSelected" value="Sök" />
+</form>
+
+  {% for project in projects  %}
+
+<article>
+<a href="{{ url_for('project', id=project['project_id'])}}">
+    <img src="{{ project['big_image'] }}" alt="sadd_replace_me">
+    <p class="project_name"> {{ project['project_name']  }}</p>
+    <p class="long description">{{ project['short_description'] }}</p>
+    <p class="end_date">End date: {{ project['end_date'] }}</p>
+    <p class="start_date">Start date: {{ project['start_date'] }}</p>  
+</a>
+    </article>
+
+  {% endfor %}
+
+{% endblock %}

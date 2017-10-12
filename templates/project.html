@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block body %}
+
+<link href="../static/stylesheets/project.css" rel="stylesheet" type="text/css" />
+
+<h1 id="project_name">{{ project["project_name"] }}</h1>
+
+<img id="picture" src="{{ project['big_image'] }}" alt="Bild för projektet"></img>
+<p id="short_description">Kort beskrivning: <br> {{ project["short_description"] }}</p>
+
+
+{% endblock %}

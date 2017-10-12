@@ -1,0 +1,41 @@
+footer {
+    background-color: white;
+    border-top: solid black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    overflow:hidden;
+    margin-top: 1%;
+}
+body, html {
+    height: 100%;
+}
+#wrapper {
+    height: 90%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}

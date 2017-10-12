@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block body %}
+
+<link href="../static/stylesheets/tech.css" rel="stylesheet" type="text/css" />
+
+  {% for project in projects  %}
+<article>
+    <img src="{{ project['big_image'] }}" alt="sadd_replace_me">
+    <p class="project_name"> {{ project['project_name']  }}</p>
+    <p class="long description">{{ project['short_description'] }}</p>
+    <p class="end_date">End date: {{ project['end_date'] }}</p>
+    <p class="start_date">Start date: {{ project['start_date'] }}</p>
+</article>
+  {% endfor %}
+
+<form method="get">
+{% for t in tech %}
+        <input type="submit" name="submit" value="{{ t }}"></input>
+        {% endfor %}
+</form>
+
+{% endblock %}

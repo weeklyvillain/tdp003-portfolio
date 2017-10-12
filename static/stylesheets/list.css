@@ -1,0 +1,70 @@
+ul {
+    margin-left: 0%;
+    padding: 0%;
+}
+
+article {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border: solid black;
+    height: auto;
+    text_decoration:
+}
+
+article > a > img{
+    float: right;
+}
+
+article > a > p {
+    padding: 1%;
+}
+
+.end_date{
+    float: right;
+}
+
+select {
+    display: inline-block;
+    height:30px;
+    width: 150px;
+    padding: 2px 10px 2px 2px;
+    outline: none;
+    color: #74646e;
+    border: 1px solid #C8BFC4;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 2px #ddd8dc;
+    background: #fff; 
+}
+
+form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+img{
+    margin: 1%;
+    position: relative;
+    width: 20%;
+    height: auto;
+}
+
+article > a:link {
+    text-decoration: none;
+    color: black;
+}
+
+article > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+article > a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
