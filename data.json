@@ -1,4 +1,5 @@
 [
+
   {
     "start_date": "2009-09-05",
     "short_description": "no",
@@ -72,10 +73,11 @@
     "techniques_used": [
     "c#"
 ],
-    "project_name": ",",
+    "project_name": "Hello World!",
     "course_id": " \"",
     "end_date": "2009-09-07",
     "project_id": 4,
     "big_image": "../static/bilder/hacking_big.jpeg"
   }
 ]
+

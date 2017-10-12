@@ -27,6 +27,14 @@ def get_project(db, id):
         return None
     return lst
 
+def get_keys(db):
+    key_lst = []
+    for project in db:
+        for key in project:
+            if not key in key_lst:
+                key_lst.append(key)
+    return key_lst;
+ 
 def get_techniques(db):
     techniques = []
     for item in db:

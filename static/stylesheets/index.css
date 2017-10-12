@@ -1,0 +1,91 @@
+footer {
+    background-color: white;
+    border-top: solid black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    overflow:hidden;
+    margin-top: 1%;
+}
+body, html {
+    height: 100%;
+}
+#wrapper {
+    height: 90%;
+}
+
+#description{
+    margin-left: 5%;
+    max-width: 90%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+.project {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border: solid black;
+    height: auto;
+}
+
+.project > img{
+    float: right;
+    clear:both;
+    max-width: 15%;
+}
+
+.project > a > p {
+    padding: 1%;
+}
+
+.end_date{
+    float: right;
+}
+
+
+img{
+    margin: 1%;
+    position: relative;
+    width: 20%;
+    height: auto;
+}
+
+article > a:link {
+    text-decoration: none;
+    color: black;
+}
+
+article > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+article > a:hover {
+    text-decoration: underline;
+    color: black;
+}

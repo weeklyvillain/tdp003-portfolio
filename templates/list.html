@@ -21,7 +21,7 @@
 <input type="text" name="search_word" placeholder="Sök">
 <select id="sort_by" name="sort_by">
     <option value="start_date">Sortera efter:</option>
-    {% for i in projects[0] %}
+    {% for i in keys %}
     <option value="{{ i }}">{{ i }}</option>
     {% endfor %}
 </select> 
@@ -35,7 +35,7 @@
         {% endfor %}
 </select>
 <select id="lst_fields" multiple="multiple" name="field_lst">
-        {%  for i in projects[0] %}
+        {%  for i in keys %}
         <option value="{{ i }}">{{ i }}</option>
         {% endfor %}
 </select>
@@ -45,8 +45,9 @@
   {% for project in projects  %}
 
 <article>
+<img src="{{ project['big_image'] }}" alt="sadd_replace_me">
 <a href="{{ url_for('project', id=project['project_id'])}}">
-    <img src="{{ project['big_image'] }}" alt="sadd_replace_me">
+    
     <p class="project_name"> {{ project['project_name']  }}</p>
     <p class="long description">{{ project['short_description'] }}</p>
     <p class="end_date">End date: {{ project['end_date'] }}</p>

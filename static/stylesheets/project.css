@@ -1,3 +1,10 @@
+article {
+    margin-left: 5%;
+}
+#project_name{
+    text-decoration: underline;
+}
+
 #short_description {
     display: inline-block;
     width: 70%;
@@ -7,4 +14,5 @@
 #picture {
     display: inline-block;
     margin: 1%;
+    margin-left: 0%;
 }

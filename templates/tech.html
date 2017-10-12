@@ -5,12 +5,15 @@
 
   {% for project in projects  %}
 <article>
-    <img src="{{ project['big_image'] }}" alt="sadd_replace_me">
+<img src="{{ project['big_image'] }}" alt="sadd_replace_me">
+<a href="{{ url_for('project', id=project['project_id'])}}">
+    
     <p class="project_name"> {{ project['project_name']  }}</p>
     <p class="long description">{{ project['short_description'] }}</p>
     <p class="end_date">End date: {{ project['end_date'] }}</p>
-    <p class="start_date">Start date: {{ project['start_date'] }}</p>
-</article>
+    <p class="start_date">Start date: {{ project['start_date'] }}</p>  
+</a>
+    </article>
   {% endfor %}
 
 <form method="get">

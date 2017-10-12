@@ -11,20 +11,20 @@ input[type=submit]{
 
 article {
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 5%;
     margin-top: 1%;
     border: solid black;
     height: auto;
-    float: right;
-    margin-right: 5%;
+    float:right;
 }
 
-article > img{
+article  > img{
     float: right;
+    clear:both;
+    max-width: 15%;
 }
 
-article > p {
+article > a > p {
     padding: 1%;
 }
 
@@ -39,4 +39,17 @@ img{
     height: auto;
 }
 
+article > a:link {
+    text-decoration: none;
+    color: black;
+}
 
+article > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+article > a:hover {
+    text-decoration: underline;
+    color: black;
+}

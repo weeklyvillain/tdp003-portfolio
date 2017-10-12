@@ -3,27 +3,7 @@ ul {
     padding: 0%;
 }
 
-article {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-    border: solid black;
-    height: auto;
-    text_decoration:
-}
 
-article > a > img{
-    float: right;
-}
-
-article > a > p {
-    padding: 1%;
-}
-
-.end_date{
-    float: right;
-}
 
 select {
     display: inline-block;
@@ -44,6 +24,31 @@ form {
     margin-right: auto;
     margin-top: 1%;
 }
+
+article {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border: solid black;
+    height: auto;
+
+}
+
+article  > img{
+    float: right;
+    clear:both;
+    max-width: 15%;
+}
+
+article > a > p {
+    padding: 1%;
+}
+
+.end_date{
+    float: right;
+}
+
 
 img{
     margin: 1%;

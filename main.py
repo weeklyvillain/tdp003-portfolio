@@ -6,9 +6,15 @@ app = Flask(__name__)
 db = load('data.json')
 tech = get_techniques(db)
 
+keys = get_keys(db)
+
+
 @app.route("/")
 def index():
-    return render_template("index.html" , projects=db, tech=tech)
+    l = search(db, 'start_date', 'desc')
+    l = l[:2]
+    
+    return render_template("index.html" , projects=l)
 
 
 @app.route("/list", methods=["GET"])
@@ -22,8 +28,8 @@ def list():
     field_lst = request.args.getlist("field_lst")
 
     project_lst = search(db, sort_by=sort_b, sort_order=sort_o, techniques=tech_lst, search=search_term, search_fields=field_lst)
-
-    return render_template("list.html" , projects=project_lst, tech=tech)
+    
+    return render_template("list.html" , projects=project_lst, tech=tech, keys=keys)
 
 @app.route("/techniques", methods=["GET"])
 def techniques():
