@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 
-virtenv = os.environ['ssh://59df606679c0532a7c000576@portfolio-filer358.openshift.ida.liu.se/~/git/portfolio.git/'] + '/virtenv/'
+virtenv = os.environ['portfolio-filer358.openshift.ida.liu.se/~/git/portfolio.git/'] + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     with open(virtualenv) as f:
@@ -15,7 +15,7 @@ except IOError:
 #
 
 import os
-os.chdir(os.environ['ssh://59df606679c0532a7c000576@portfolio-filer358.openshift.ida.liu.se/~/git/portfolio.git/'])
+os.chdir(os.environ['portfolio-filer358.openshift.ida.liu.se/~/git/portfolio.git/'])
 
 from main import app as application
 
