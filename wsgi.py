@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-import os
 
-virtenv = os.environ[''] + '/virtenv/'
-virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
+
+virtualenv = 'bin/activate_this.py'
 try:
     with open(virtualenv) as f:
         code = compile(f.read(), virtualenv, 'exec')
@@ -14,8 +13,7 @@ except IOError:
 # line, it's possible required libraries won't be in your searchable path
 #
 
-import os
-os.chdir(os.environ['portfolio-filer358.openshift.ida.liu.se/~/git/portfolio.git/'])
+
 
 from main import app as application
 
