@@ -2,23 +2,10 @@
 {% block body %}
  
 
-
-    <script type="text/javascript">
-        $(function () {
-            $('#lst_techniques').multiselect({
-                includeSelectAllOption: true,
-                nonSelectedText: "Tekniker:"
-            });
-            $('#lst_fields').multiselect({
-                includeSelectAllOption: true,
-                nonSelectedText: "Sök i:"
-            });
-        });
-    </script>
 <link href="../static/stylesheets/list.css" rel="stylesheet" type="text/css" />
 
 <form method="get">
-<input type="text" name="search_word" placeholder="Sök">
+<input type="text" id="searchBox" name="search_word" placeholder="Sök">
 <select id="sort_by" name="sort_by">
     <option value="start_date">Sortera efter:</option>
     {% for i in keys %}
@@ -26,8 +13,8 @@
     {% endfor %}
 </select> 
 <select id="sort_order" name="sort_order">
-    <option value="asc">Asc</option>
-    <option value="desc">desc</option>  
+    <option value="asc">Stigande</option>
+    <option value="desc">Fallande</option>  
 </select>
 <select id="lst_techniques" multiple="multiple" name="tech_lst">
         {% for t in tech %}
@@ -56,5 +43,39 @@
     </article>
 
   {% endfor %}
+<script type="text/javascript">
+        $(function () {
+            $('#lst_techniques').multiselect({
+                includeSelectAllOption: true,
+                nonSelectedText: "Tekniker:"
+            });
+            $('#lst_fields').multiselect({
+                includeSelectAllOption: true,
+                nonSelectedText: "Sök i:"
+            });
+        });
 
+$.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return results[1] || 0;
+}
+console.log(decodeURIComponent($.urlParam('tech_lst')));
+if($.urlParam('search_word')){
+$("#searchBox").val($.urlParam('search_word'))
+}
+
+if($.urlParam('sort_by')){
+$("#sort_by").val($.urlParam('sort_by'))
+}
+
+if($.urlParam('sort_order')){
+$("#sort_order").val($.urlParam('sort_order'))
+}
+
+if($.urlParam('tech_lst')){
+$("#lst_techniques").val($.urlParam('tech_lst'))
+}
+
+
+    </script>
 {% endblock %}

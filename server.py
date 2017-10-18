@@ -8,9 +8,19 @@ tech = get_techniques(db)
 
 keys = get_keys(db)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    error=e.description + " Error: 500"
+    return render_template('fel.html', error=error)
+
+@app.errorhandler(500)
+def page_not_found(e):
+    error="Projektet kunde inte hittas, Error: 404"
+    return render_template('fel.html', error=error)
 
 @app.route("/")
 def index():
+    db = load('data.json')
     l = search(db, 'start_date', 'desc')
     l = l[:2]
     
@@ -19,6 +29,7 @@ def index():
 
 @app.route("/list", methods=["GET"])
 def list():
+    db = load('data.json')
     project_lst = []
     
     search_term = request.args.get("search_word", default=None)
@@ -33,6 +44,7 @@ def list():
 
 @app.route("/techniques", methods=["GET"])
 def techniques():
+    db = load('data.json')
     technique = request.args.get("submit")
     project_lst = []    
     if technique != None:
@@ -43,6 +55,7 @@ def techniques():
 
 @app.route("/project/<int:id>")
 def project(id):
+    db = load('data.json')
     project = get_project(db, id)
     return render_template("project.html", project=project)
 
